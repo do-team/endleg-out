@@ -16,7 +16,6 @@ var params = {
     TableName:table,
     Item:{
         "user": user,
-        "name": name
     }
 };
 
