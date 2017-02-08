@@ -14,8 +14,8 @@ var user = "test";
 
 var params = {
     TableName:table,
-    Item:{
-        "user": user,
+    Key:{
+        "user": user
     }
 };
 
