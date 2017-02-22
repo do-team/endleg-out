@@ -1,5 +1,6 @@
 var AWS = require("aws-sdk");
 var nJwt = require('njwt');
+
 exports.handler = (event, context, callback) => {
     AWS.config.update({
         region: "eu-central-1",
@@ -10,8 +11,6 @@ exports.handler = (event, context, callback) => {
     console.log('token: ', token);
 
     nJwt.verify(token, signingKey, function(err, verifiedJwt) {
-            console.log(event);
-
             if (err) {
 
                 console.log('Error - but actually it will go trough...', err); // Token has expired, has been tampered with, etc
