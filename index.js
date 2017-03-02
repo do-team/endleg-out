@@ -29,8 +29,10 @@ exports.handler = (event, context, callback) => {
                     if (err) {
                         console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 1));
                     } else {
-                        var response = JSON.stringify(data.items, null, 1);
+                        var response = JSON.stringify(data.item, null, 1);
                         console.log("GetItem succeeded:", response);
+                        console.log("Data:", data);
+                        console.log("Data Item:", data.item);
                         callback(response);
                     }
                 });
