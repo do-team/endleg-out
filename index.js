@@ -31,10 +31,6 @@ exports.handler = (event, context, callback) => {
                     } else {
                         var response = JSON.stringify(data, null, 1);
                         console.log("GetItem succeeded:", response);
-                        console.log("Data:", data);
-                        console.log("Data 0 :", data[0]);
-                        console.log("Data Item:", data.item);
-                        console.log("Data Item 0:", data.item[0]);
                         callback(response);
                     }
                 });
